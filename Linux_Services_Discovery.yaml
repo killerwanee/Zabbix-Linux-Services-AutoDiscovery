@@ -1,0 +1,37 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    - uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    - uuid: 0ef119c02a0e44a4bfb2a81e4aaebae4
+      template: Linux_Services
+      name: 'Linux Services Discovery'
+      description: |
+        
+        ## Author
+        Marwane - Forked from author "Frater"
+        
+      groups:
+        - name: Templates
+      discovery_rules:
+        - uuid: 9a725c79a13645169cc520531fb17d31
+          name: 'Linux service discovery'
+          key: service.discovery
+          delay: 1h
+          filter:
+            conditions:
+              - macro: '{#SERVICE}'
+                value: '@Linux service name for discovery'
+                formulaid: A
+          lifetime: 90d
+          item_prototypes:
+            - uuid: 8ec0013905b4478e9a22979116e46ce7
+              name: 'Service status {#SERVICE}'
+              key: 'service.status[{#SERVICE}]'
+              delay: 2m
+              trigger_prototypes:
+                - uuid: 22148d0e6f8b40a3ba8a174f9972c910
+                  expression: 'last(/Linux_Services/service.status[{#SERVICE}])=0'
+                  name: 'Service "{#SERVICE}" is not running'
+                  priority: HIGH
