@@ -1,6 +1,8 @@
 apache2@
 apache-htcacheclean
 apache-htcacheclean@
+apport-coredump-hook@
+apport-forward@
 apt-daily
 apt-daily-upgrade
 autovt@
@@ -41,7 +43,11 @@ kmod
 kmod-static-nodes
 libreoffice
 logrotate
+lxd-installer@
 man-db
+mdadm-grow-continue@
+mdadm-last-resort@
+mdmon@
 modprobe@
 pam_namespace
 pg_basebackup@
@@ -50,6 +56,7 @@ pg_dump@
 pg_receivewal@
 plocate-updatedb
 portmap
+postfix@
 postgresql@
 procps
 quotaon
@@ -60,7 +67,6 @@ rescue
 rpc-statd-notify
 rsync
 serial-getty@
-ssh@
 sshd
 sudo
 syslog
@@ -75,6 +81,7 @@ systemd-firstboot
 systemd-fsck-root
 systemd-fsck@
 systemd-fsckd
+systemd-growfs@
 systemd-halt
 systemd-hibernate
 systemd-hibernate-resume@
@@ -89,6 +96,8 @@ systemd-machine-id-commit
 systemd-modules-load
 systemd-network-generator
 systemd-networkd-wait-online@
+systemd-pcrextend@
+systemd-pcrfs@
 systemd-pcrphase
 systemd-pcrphase-initrd
 systemd-pcrphase-sysinit
@@ -118,8 +127,11 @@ systemd-update-utmp-runlevel
 systemd-user-sessions
 systemd-volatile-root
 udev
+usb_modeswitch@
 user-runtime-dir@
 user@
 vgauth
 vmtoolsd
 x11-common
+xfs_scrub@
+xfs_scrub_fail@
