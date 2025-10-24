@@ -60,6 +60,7 @@ rescue
 rpc-statd-notify
 rsync
 serial-getty@
+ssh@
 sshd
 sudo
 syslog
