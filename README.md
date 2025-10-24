@@ -13,6 +13,7 @@ It's my first time creating something on github and also, I used ChatGPT for doi
 - `service_discovery.sh` – Script to discover systemd services and report their status numerically.
 - `service_ignore.list` – List of services to exclude from discovery.
 - `Linux_Discovery.yaml` – Zabbix template for service discovery.
+- `linux_service_discovery_deployment_script` – Script to download and deploy config files and parameters from this git and auto-apply securely on your system.
 - Instructions to configure Zabbix agent.
 
 ## Requirements
@@ -20,7 +21,7 @@ It's my first time creating something on github and also, I used ChatGPT for doi
 - Zabbix agent installed on the monitored host.
 - Systemd-based Linux distribution.
 
-## Installation
+## Installation (manually)
 
 1. **Place scripts on the monitored host:**
 
